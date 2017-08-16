@@ -31,13 +31,13 @@ export default class PlayBehavior extends BaseBehavior {
       if (data[1][0] === this.bot.playerId) {
         this.previousPos = this.currentPos;
         this.currentPos = {
-          x: data[1][1][0],
-          y: data[1][1][1]
+          x: data[1][1],
+          y: data[1][2]
         };
       } else if (data[1][0] === this.bot.targetId) {
         this.targetPos = {
-          x: data[1][1][0],
-          y: data[1][1][1]
+          x: data[1][1],
+          y: data[1][2]
         };
       }
     }
@@ -56,8 +56,9 @@ export default class PlayBehavior extends BaseBehavior {
     if (difference < -Math.PI) {
       difference += Math.PI * 2;
     }
-    // console.log(angleToTarget, angleOfTravel, difference);
+    console.log(angleToTarget, angleOfTravel, difference);
 
+// 0 ???
     if (difference > 0) {
       this.bot.send('player:move', { avatar: this.bot.playerId, move: 1 });
     } else {

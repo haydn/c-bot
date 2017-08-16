@@ -9,7 +9,15 @@
     "name-generator": "^0.1.1",
     "uuid": "^2.0.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "babel-cli": "^6.10.1",
+    "babel-preset-es2015": "^6.9.0"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
