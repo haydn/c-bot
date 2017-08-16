@@ -18,8 +18,8 @@ export default class CountdownBehavior extends BaseBehavior {
   }
 
   checkPlayer(data) {
-    if (data[1] && data[1].avatar && data[1].avatar !== this.bot.playerId) {
-      this.others.push(data[1].avatar);
+    if (data[1] && data[1] !== this.bot.playerId) {
+      this.others.push(data[1]);
     }
   }
 
